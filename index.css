@@ -1,0 +1,27 @@
+.Center{
+text-align: center;
+}
+.margin-bg{
+    margin: 200px;
+}
+.margin-lt{
+    margin-left: 20px;
+}
+.margin-lt-bg{
+    margin-left: 50px;
+}
+
+.neumorphism{
+    border-radius: 17px;
+    background: #ffffff;
+    box-shadow:  10px 10px 20px #d9d9d9,
+                 -10px -10px 20px #ffffff;
+}
+
+.margin-md{
+    margin: 30px;
+}
+
+.addition{
+    color: #808080;
+}
