@@ -25,7 +25,15 @@ text-align: center;
 .addition{
     color: #808080;
 }
+
 .renner{
+    font-family: ‘Renner*’;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.blue{
+    color: #191970;
     font-family: ‘Renner*’;
     font-style: italic;
     font-weight: bold;
