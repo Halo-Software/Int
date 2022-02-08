@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&family=Noto+Sans+JP&display=swap');
 .Center{
 text-align: center;
 }
@@ -33,8 +35,11 @@ text-align: center;
     white-space: nowrap;
 }
 
-.nowrap{
- white-space: nowrap;   
-    }
+h3{
+    font-family: 'M PLUS 1p', sans-serif;
+}
 
+p{
+font-family: 'Noto Sans JP', sans-serif;
+    }
  
