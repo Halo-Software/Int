@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=M+PLUS+1p&family=Noto+Sans+JP:wght@300&display=swap');
+
+:root {
+    --height3: 3%;
+}
+
+body {
+    background-color: white;
+    font-family: 'Jost', 'M PLUS 1p', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-wrap: anywhere;
+    margin-right: 10%;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+}
+
+.main-txt {
+    font-size: 10vw;
+    animation: SlideIn 0.5s;
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    padding: 5%;
+}
+
+
+.main-txt-box {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    transform: translate(-45%, -45%);
+    -webkit-transform: translate(-45%, -45%);
+    -ms-transform: translate(-45%, -45%);
+    line-height: 3vw;
+}
+
+.sub {
+    margin-top: 0;
+    font-size: 5vw;
+    animation: SlideIn 0.7s;
+}
+
+.dottxt {
+    color: black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    line-height: 5%;
+    font-size: 2em;
+    text-align: center;
+}
+
+.black {
+    color: white;
+    background-color: black;
+}
+
+.sns {
+    margin: 5%;
+}
+
+.addition{
+    color: gray;
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    font-weight: lighter;
+}
+.quote{
+    color: gray;
+}
+.doto {
+    position: fixed;
+    bottom: 3%;
+    right: 0;
+    background-color: white;
+    width: 7.5vh;
+    height: 7.5vh;
+    mix-blend-mode: difference;
+}
+.reset{
+    margin: 0;
+}
+.bg{
+    font-size: 5vw;
+}
+/*引用 ハンバーガーメニュー*/
+.menu-btn {
+    position: fixed;
+    bottom: 3%;
+    right: 0;
+    display: flex;
+    height: 7.5vh;
+    width: 7.5vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: white;
+    mix-blend-mode: difference;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: white;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    transition: all 0.3s;/*アニメーション設定*/
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:black;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li h1 {
+    margin: 0;
+}
+	
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}
+/*引用終わり*/
+@keyframes SlideIn {
+    0% {
+        opacity: 0;
+        /*初期状態では透明に*/
+        -webkit-transform: translateX(-30%);
+    }
+
+    100% {
+        opacity: 1;
+        -ms-transform: translateX(0);
+    }
+}
+
+@media (min-width: 671px) {
+    .worksbase {
+        display: flex;
+    }
+
+    .works {
+        flex: 1;
+    }
+}
